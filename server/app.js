@@ -1,6 +1,6 @@
 const express = require("express")
 const { graphqlHTTP } = require('express-graphql');
-const schema = require("./schema/schema")
+const schema = require("./../database/graphQL/schema/schema")
 const cors = require("cors")
 
 const app = express()
@@ -10,7 +10,7 @@ app.use(cors())
 
 const bodyParser = require('body-parser')
 //cnnect to db
-const db = require("./models")
+const db = require("./../database/models")
 const PORT = process.env.PORT || 8000
 
 app.use(bodyParser.urlencoded({ extended: true }))
