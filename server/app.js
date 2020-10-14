@@ -1,12 +1,9 @@
 const express = require("express")
 const { graphqlHTTP } = require('express-graphql');
 const schema = require("./../database/graphQL/schema/schema")
-const cors = require("cors")
 
 const app = express()
 
-//allow cros-origin requests
-app.use(cors())
 
 const bodyParser = require('body-parser')
 //cnnect to db
